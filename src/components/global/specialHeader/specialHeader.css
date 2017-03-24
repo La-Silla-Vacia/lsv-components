@@ -1,0 +1,39 @@
+.g-specialHeader {
+  @apply --typeset-ui;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  color: map(colors, primary, base);
+  line-height: 1.5;
+  padding-bottom: 2em;
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+  }
+
+  &__title {
+    font-family: map(fonts, family-serif);
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 1em;
+    line-height: 1.5;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 0.875em;
+    font-weight: 700;
+    margin: 10px auto 0;
+    letter-spacing: 1px;
+  }
+
+  &__content {
+    margin: 2em auto;
+  }
+}

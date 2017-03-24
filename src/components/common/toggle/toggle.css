@@ -1,0 +1,56 @@
+.c-toggle {
+  @apply --typeset-ui;
+  background: #fff;
+  box-sizing: border-box;
+  max-width: 600px;
+  display: block;
+  border: 3px solid map(colors, secondary, base);
+  &__button {
+    background-color: #fff;
+    color: map(colors, primary, dark);
+    padding: .5em 1em;
+    cursor: pointer;
+    font-weight: 600;
+    border: 0;
+    font-size: 1.1em;
+    text-align: left;
+    width: 100%;
+    position: relative;
+  }
+
+  &__button::after {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-image: url('../icons/toggle.svg');
+    background-size: cover;
+    position: absolute;
+    right: .5em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .5s ease;
+  }
+
+  &--open &__button::after {
+    transform: translateY(-50%) rotate(-135deg);
+  }
+
+  &__button:focus {
+    outline: none;
+    box-shadow: -3px 0 map(colors, primary, base);
+  }
+
+  &__content {
+    border-top: 0;
+    background-color: #fff;
+    overflow: hidden;
+    padding: .5em 1em;
+    display: none;
+
+    & > p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

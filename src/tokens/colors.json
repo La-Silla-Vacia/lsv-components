@@ -1,0 +1,66 @@
+{
+  "primary": {
+    "dark": "#444848",
+    "base": "#44a5db",
+    "xdark": "#2d3132"
+  },
+  "secondary": {
+    "light": "#dddddd",
+    "base": "#b2babe",
+    "dark": "#898d90"
+  },
+  "productos": {
+    "caribe": "#cd2843",
+    "santander": "#f6b217",
+    "opinion": "#376b97",
+    "siONo": "#00537f",
+    "conversaciones": "#a6d164",
+    "quienEsQuien": "#675fb5",
+    "hagameElCruce": "#f06f38",
+    "elIq": "#5b3485",
+    "laboratorio": "#904091",
+    "laSillaLlena": "#033a5a"
+  },
+  "red": {
+    "santander": "#f6b217",
+    "caribe": "#cd2843",
+    "deLaPaz": "#009a67",
+    "deLaMujer": "#b2406e",
+    "rural": "#566275",
+    "deLaMineria": "#b5805d",
+    "cachaca": "#723158",
+    "deEducacion": "#1c7b8d",
+    "lider": "#414184",
+    "ambiental": "#296653",
+    "deInnovacion": "#537185",
+    "social": "#D06032",
+    "cultural": "#623F6B"
+  },
+  "partidos": {
+    "liberal": "#cf2a24",
+    "polo": "#f0dc00",
+    "opcionCiudadana": "#bb9c3c",
+    "laU": "#f08800",
+    "alianzaVerde": "#03a855",
+    "centroDemocratico": "#4ad4ed",
+    "asi": "#a8a8a8",
+    "cambioRadical": "#7e00ff",
+    "conservador": "#012bb3",
+    "mira": "#001865",
+    "mais": "#d40096"
+
+  },
+  "espaciales": {
+    "procesoDePaz": "#009a67",
+    "elecciones2015": "#00b16b"
+  },
+  "neutral": {
+    "lightest": "#efeff0",
+    "lighter": "#b9b9c0",
+    "light": "#8c8c9c",
+    "base": "#778",
+    "dark": "#636373",
+    "darker": "#3f3f46",
+    "darkest": "#1f1f20"
+  }
+}
