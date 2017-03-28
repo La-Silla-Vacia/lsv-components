@@ -9,6 +9,6 @@ variants:
     disabled: true
 - name: more
   context:
-    label: Show me another 24 ways…
+    label: Show me more…
     href: ?page=2
     mods: [more]

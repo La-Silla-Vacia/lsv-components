@@ -9,9 +9,9 @@ const paths = {
 const fractal = require('@frctl/fractal').create();
 
 const mandelbrot = require('@frctl/mandelbrot')({
-  favicon: `/assets/v${pkg.version}/icons/icon.ico`,
+  favicon: `/assets/icons/icon.ico`,
   lang: 'es',
-  styles: ['default', `/assets/v${pkg.version}/styles/theme.css`],
+  styles: ['default', `/assets/styles/theme.css`],
   static: {
     mount: 'fractal',
   },
@@ -41,7 +41,7 @@ const nunjucks = require('@frctl/nunjucks')({
       return JSON.stringify(this, null, '\t');
     },
   },
-  paths: [`${paths.static}/assets/v${pkg.version}/vectors`],
+  paths: [`${paths.static}/assets/vectors`],
 });
 
 // Project config

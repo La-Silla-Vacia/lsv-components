@@ -35,36 +35,4 @@
   };
 
   win.cookie = cookie;
-
-  // Load webfonts
-  // Requires FontFaceObserver (included during build)
-  const sansRegular = new FontFaceObserver('Source Sans Pro', {
-    weight: 'normal',
-    style: 'normal',
-  });
-
-  const sansBold = new FontFaceObserver('Source Sans Pro', {
-    weight: '700',
-    style: 'normal',
-  });
-
-  const serifRegular = new FontFaceObserver('Source Serif Pro', {
-    weight: 'normal',
-    style: 'normal',
-  });
-
-  const monospace = new FontFaceObserver('Source Code Pro', {
-    weight: 'normal',
-    style: 'normal',
-  });
-
-  Promise.all([
-    sansRegular.load(),
-    sansBold.load(),
-    serifRegular.load(),
-    monospace.load(),
-  ]).then(function () {
-    doc.documentElement.className += ' fonts-loaded';
-    cookie('fonts-loaded', !0, 7);
-  });
 }(window, window.document));

@@ -133,8 +133,8 @@ function clean() {
 // Deploy to GitHub pages
 function deploy() {
   // Generate CNAME file from `homepage` value in package.json
-  const cname = pkg.homepage.replace(/.*?:\/\//g, '');
-  fs.writeFileSync(`${paths.build}/CNAME`, cname);
+  // const cname = pkg.homepage.replace(/.*?:\/\//g, '');
+  // fs.writeFileSync(`${paths.build}/CNAME`, cname);
 
   // Push contents of build folder to `gh-pages` branch
   return gulp.src(`${paths.build}/**/*`)
@@ -153,7 +153,7 @@ function meta() {
 function icons() {
   return gulp.src(`${paths.src}/assets/icons/**/*`)
     .pipe(imagemin())
-    .pipe(gulp.dest(`${paths.dest}/assets/v${pkg.version}/icons`));
+    .pipe(gulp.dest(`${paths.dest}/assets/icons`));
 }
 
 // Images
@@ -162,13 +162,13 @@ function images() {
     .pipe(imagemin({
       progressive: true,
     }))
-    .pipe(gulp.dest(`${paths.dest}/assets/v${pkg.version}/images`));
+    .pipe(gulp.dest(`${paths.dest}/assets/images`));
 }
 
 // Vectors
 function vectors() {
   return gulp.src(`${paths.src}/assets/vectors/**/*`)
-    .pipe(gulp.dest(`${paths.dest}/assets/v${pkg.version}/vectors`));
+    .pipe(gulp.dest(`${paths.dest}/assets/vectors`));
 }
 
 // Scripts
@@ -206,7 +206,7 @@ function scripts() {
     .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(`${paths.dest}/assets/v${pkg.version}/scripts`));
+    .pipe(gulp.dest(`${paths.dest}/assets/scripts`));
 }
 
 // Styles
@@ -215,7 +215,7 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(`${paths.dest}/assets/v${pkg.version}/styles`));
+    .pipe(gulp.dest(`${paths.dest}/assets/styles`));
 }
 
 // Watch
