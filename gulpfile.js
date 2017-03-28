@@ -1,7 +1,6 @@
 // --------------------------------------------------------
 // Dependencies
-// --------------------------------------------------------
-const pkg = require('./package.json');
+// ------------------------------------------------
 
 // Fractal
 const fractal = require('./fractal.js');
@@ -9,7 +8,6 @@ const logger = fractal.cli.console;
 
 // Utils
 const del = require('del');
-const fs = require('fs');
 const gulp = require('gulp');
 
 // JavaScript
@@ -93,6 +91,13 @@ const modules = [
   `${paths.src}/assets/scripts/utils/focusing.js`,
   `${paths.src}/assets/scripts/app.js`,
   `${paths.src}/components/**/*.js`,
+  `!${paths.src}/components/index.js`,
+];
+
+// Components
+const preactComponents = [
+  `${paths.src}/components/**/*.jsx`,
+  `${paths.src}/components/index.js`,
 ];
 
 
@@ -172,41 +177,39 @@ function vectors() {
 }
 
 // Scripts
-// function scripts() {
-//   return gulp.src(modules)
-//     .pipe(sourcemaps.init())
-//     .pipe(babel({
-//       presets: [
-//         ['es2015']
-//       ],
-//     }))
-//     .pipe(concat('app.js'))
-//     .pipe(uglify())
-//     .pipe(sourcemaps.write('./'))
-//     .pipe(gulp.dest(`${paths.dest}/assets/scripts`));
-// }
 function scripts() {
   return gulp.src(modules)
     .pipe(sourcemaps.init())
     .pipe(webpack({
       resolve: {
-        extensions: ['', '.js']
+        extensions: ['', '.js'],
       },
       module: {
         loaders: [{
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
         }]
       },
       output: {
-        filename: 'app.js'
-      }
+        filename: 'app.js',
+      },
     }))
     .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${paths.dest}/assets/scripts`));
+}
+
+function components() {
+  return gulp.src(preactComponents)
+    .pipe(babel({
+      presets: ['es2015', 'react', 'stage-2'],
+      plugins: [
+        ["transform-react-jsx", { "pragma": "h" }]
+      ]
+    }))
+    .pipe(gulp.dest('dist'));
 }
 
 // Styles
@@ -235,3 +238,4 @@ gulp.task('start', gulp.series(compile, serve));
 gulp.task('build', gulp.series(compile, build));
 gulp.task('dev', gulp.series(compile, watch));
 gulp.task('publish', gulp.series(build, deploy));
+gulp.task('prepublish', gulp.series(compile, build, components));

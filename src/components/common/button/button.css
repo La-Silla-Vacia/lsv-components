@@ -9,4 +9,5 @@
   text-transform: uppercase;
   background-color: map(colors, primary, base);
   color: #fff;
+  text-decoration: none;
 }

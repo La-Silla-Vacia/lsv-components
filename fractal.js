@@ -1,21 +1,20 @@
-const pkg = require('./package.json');
+const mandelbrot = require('@frctl/mandelbrot')({
+  favicon: '/assets/icons/icon.ico',
+  lang: 'es',
+  styles: ['default', '/assets/styles/theme.css'],
+  static: {
+    mount: 'fractal',
+  },
+});
+
+const fractal = require('@frctl/fractal').create();
+const reactAdapter = require('./lib/frctl-react-adapter');
 
 const paths = {
   build: `${__dirname}/www`,
   src: `${__dirname}/src`,
   static: `${__dirname}/tmp`,
 };
-
-const fractal = require('@frctl/fractal').create();
-
-const mandelbrot = require('@frctl/mandelbrot')({
-  favicon: `/assets/icons/icon.ico`,
-  lang: 'es',
-  styles: ['default', `/assets/styles/theme.css`],
-  static: {
-    mount: 'fractal',
-  },
-});
 
 const mdAbbr = require('markdown-it-abbr');
 const mdFootnote = require('markdown-it-footnote');
@@ -48,10 +47,11 @@ const nunjucks = require('@frctl/nunjucks')({
 fractal.set('project.title', 'Web components of La Silla Vacía');
 
 // Components config
-fractal.components.engine(nunjucks);
+// fractal.components.engine(nunjucks);
+fractal.components.engine(reactAdapter);
 fractal.components.set('default.preview', '@preview');
 fractal.components.set('default.status', null);
-fractal.components.set('ext', '.html');
+fractal.components.set('ext', '.jsx');
 fractal.components.set('path', `${paths.src}/components`);
 
 // Docs config
