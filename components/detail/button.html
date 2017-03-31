@@ -153,39 +153,21 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-cebae9d6b0cb0abbe31321ba99c49c5d-panel-html">
     <code class="Code Code--lang-html">
         
-        
-            <pre><span class="hljs-comment">&lt;!-- Default --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-</pre>
-        
-            <pre><span class="hljs-comment">&lt;!-- Disabled --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-button"</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-</pre>
-        
-            <pre><span class="hljs-comment">&lt;!-- More --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-button c-button--more m-color-primary-base"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"?page=2"</span>&gt;</span>
-  Show me more…
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-</pre>
-        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://lasillavacia.com"</span>&gt;</span>The button text<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
 </div>
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-cebae9d6b0cb0abbe31321ba99c49c5d-panel-view">
-    <code class="Code Code--lang-html">
-        <pre>{%- if href -%}
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-button{% for mod in mods %} c-button--{{ mod }}{% endfor %} m-color-primary-base"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ href }}"</span>&gt;</span>
-  {{ label }}
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-{%- else -%}
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-button{% for mod in mods %} c-button--{{ mod }}{% endfor %}"</span>
-        {{ " <span class="hljs-attr">type</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">submit</span>\"" <span class="hljs-attr">if</span> <span class="hljs-attr">submit</span> }}{{ " <span class="hljs-attr">disabled</span>" <span class="hljs-attr">if</span> <span class="hljs-attr">disabled</span> }}&gt;</span>{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-{%- endif -%}</pre>
+    <code class="Code Code--lang-javascript">
+        <pre><span class="hljs-keyword">import</span> { h, Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'preact'</span>;
+
+<span class="hljs-keyword">const</span> Button = <span class="hljs-function">(<span class="hljs-params">{ children, ...props }</span>) =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-button"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{props.link}</span>&gt;</span>{ children }<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Button;</pre>
     </code>
 </div>
 
@@ -193,36 +175,9 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-cebae9d6b0cb0abbe31321ba99c49c5d-panel-context">
     <code class="Code Code--lang-json">
         
-        
-            <pre>
-<span class="hljs-comment">/* Default */</span>
-{
-  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Button"</span>
-}
-
-</pre>
-        
-            <pre>
-<span class="hljs-comment">/* Disabled */</span>
-{
-  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Disabled button"</span>,
-  <span class="hljs-attr">"disabled"</span>: <span class="hljs-literal">true</span>
-}
-
-</pre>
-        
-            <pre>
-<span class="hljs-comment">/* More */</span>
-{
-  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Show me more…"</span>,
-  <span class="hljs-attr">"href"</span>: <span class="hljs-string">"?page=2"</span>,
-  <span class="hljs-attr">"mods"</span>: [
-    <span class="hljs-string">"more"</span>
-  ]
-}
-
-</pre>
-        
+            
+            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            
         
     </code>
 </div>
@@ -238,13 +193,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-40d38d6f4041efcdbbb7df06857c8134">button.css</option>
+                <option value="file-8f7de0f54f6e6dceb5cb751663b37516">Button.css</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-40d38d6f4041efcdbbb7df06857c8134" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-8f7de0f54f6e6dceb5cb751663b37516" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -263,6 +218,7 @@
   text-transform: uppercase;
   background-color: map(colors, primary, base);
   color: #fff;
+  text-decoration: none;
 }
 </pre>
                             </code>
@@ -272,15 +228,15 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">URL:</strong>
-                    <span class="Meta-value"><a data-no-pjax href="../raw/button/button.css"><span>/components/raw/button/button.css</span></a></span>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/button/Button.css"><span>/components/raw/button/Button.css</span></a></span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/common/button/button.css</span>
+                    <span class="Meta-value">src/components/common/Button/Button.css</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">290 Bytes</span>
+                    <span class="Meta-value">315 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -303,25 +259,6 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="button--default">
-                    <span>Default</span>
-                </a>, 
-            
-                <a href="button--disabled">
-                    <span>Disabled</span>
-                </a>, 
-            
-                <a href="button--more">
-                    <span>More</span>
-                </a>
-            
-            </span>
-        </li>
-        
-        <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
@@ -340,7 +277,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/common/button/button.html</span>
+            <span class="Meta-value">src/components/common/Button/Button.jsx</span>
         </li>
         
         

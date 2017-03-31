@@ -153,14 +153,8 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-9e38028431ae7ebc2747ebf07e2971a1-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>
-    The toggle title
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The toggle content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>The toggle title<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -168,16 +162,23 @@
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-9e38028431ae7ebc2747ebf07e2971a1-panel-view">
-    <code class="Code Code--lang-html">
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>
-    The toggle title
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <code class="Code Code--lang-javascript">
+        <pre><span class="hljs-comment">/* eslint-disable react/react-in-jsx-scope */</span>
+<span class="hljs-keyword">import</span> { h, Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'preact'</span>;
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The toggle content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-keyword">const</span> Toggle = <span class="hljs-function">(<span class="hljs-params">{ children, ...props }</span>) =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>
+      {props.title}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>
+      {children}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Toggle;</pre>
     </code>
 </div>
 
@@ -186,7 +187,10 @@
     <code class="Code Code--lang-json">
         
             
-            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            <pre>{
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"The toggle title"</span>,
+  <span class="hljs-attr">"children"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</span>
+}</pre>
             
         
     </code>
@@ -203,15 +207,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-4c9bf8240cf8acd39c17b4587267181d">toggle.css</option>
+                <option value="file-1a1c78a5f784933a282d5aaef87aa861">Toggle.css</option>
                 
-                <option value="file-b4ef078aa51162e19c6443da0c3a8450">toggle.js</option>
+                <option value="file-7b057bf534ea5f4276ff826de610a6f6">Toggle.js</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-4c9bf8240cf8acd39c17b4587267181d" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-1a1c78a5f784933a282d5aaef87aa861" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -269,6 +273,10 @@
     display: none;
 
     &amp; &gt; p {
+      &amp;:first-child {
+        margin-top: 0;
+      }
+
       &amp;:last-child {
         margin-bottom: 0;
       }
@@ -283,11 +291,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">URL:</strong>
-                    <span class="Meta-value"><a data-no-pjax href="../raw/toggle/toggle.css"><span>/components/raw/toggle/toggle.css</span></a></span>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/toggle/Toggle.css"><span>/components/raw/toggle/Toggle.css</span></a></span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/common/toggle/toggle.css</span>
+                    <span class="Meta-value">src/components/common/Toggle/Toggle.css</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -296,7 +304,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-b4ef078aa51162e19c6443da0c3a8450" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-7b057bf534ea5f4276ff826de610a6f6" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -349,11 +357,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">URL:</strong>
-                    <span class="Meta-value"><a data-no-pjax href="../raw/toggle/toggle.js"><span>/components/raw/toggle/toggle.js</span></a></span>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/toggle/Toggle.js"><span>/components/raw/toggle/Toggle.js</span></a></span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/common/toggle/toggle.js</span>
+                    <span class="Meta-value">src/components/common/Toggle/Toggle.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -398,7 +406,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/common/toggle/toggle.html</span>
+            <span class="Meta-value">src/components/common/Toggle/Toggle.jsx</span>
         </li>
         
         

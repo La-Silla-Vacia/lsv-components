@@ -149,103 +149,19 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-602c79dda05454ecc999bc21a0e9ee0d-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-comment">&lt;!--
-    PHP: Check if fonts-loaded cookie has been set.
-    If so, add the `fonts-loaded` class to the `html` element.
---&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"es"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"ltr"</span> <span class="hljs-attr">prefix</span>=<span class="hljs-string">"og: http://ogp.me/ns#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-js fonts-loaded"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"es"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"ltr"</span> <span class="hljs-attr">prefix</span>=<span class="hljs-string">"og: http://ogp.me/ns#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-js fonts-loaded"</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-built_in">document</span>.documentElement.className = <span class="hljs-built_in">document</span>.documentElement.className.replace(<span class="hljs-string">'no-js'</span>, <span class="hljs-string">'has-js'</span>);
-
-        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downloadJSAtOnload</span>(<span class="hljs-params"></span>) </span>{
-            <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);
-            element.src = <span class="hljs-string">"../../assets/v1.0.0/scripts/app.js"</span>;
-            <span class="hljs-built_in">document</span>.body.appendChild(element);
-            <span class="hljs-built_in">document</span>.body.dataset.menuExpanded = <span class="hljs-string">'false'</span>;
-        }
-        <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"load"</span>, downloadJSAtOnload, <span class="hljs-literal">false</span>);
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"dns-prefetch"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//fonts.googleapis.com"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"dns-prefetch"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//themes.googleusercontent.com"</span> /&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"shortcut icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../assets/v1.0.0/icons/icon.ico"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"image/ico"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"apple-touch-icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../assets/v1.0.0/icons/icon.png"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"image/png"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"mask-icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../assets/icons/v1.0.0/icon.svg"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">""</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/humans.txt"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"manifest"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/manifest.json"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../assets/v1.0.0/styles/app.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"</span>
-        <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charSet</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"referrer"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"origin"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"robots"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"index, follow"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"format-detection"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"telephone=no"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:title"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">""</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">""</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:url"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">""</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:image"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"../../assets/icons/icon.png"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"twitter:card"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"summary"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"twitter:site"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"@"</span> /&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/system/system.base.css?omxbcp"</span>);
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/contextual/contextual.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/media/css/media.css?omxbcp"</span>);
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/simplenews/simplenews.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/date/date_api/date.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/field/theme/field.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/logintoboggan/logintoboggan.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/node/node.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/views/css/views.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/ckeditor/css/ckeditor.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/admin_menu/admin_menu.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/shortcut/shortcut.css?omxbcp"</span>);
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/ctools/css/ctools.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/panels/css/panels.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/layouts/despliegue/despliegue.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/webform/css/webform.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/panels/plugins/layouts/onecol/onecol.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/ckeditor/css/ckeditor.editor.css?omxbcp"</span>);
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.css"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"all"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/bootstrap/css/3.3.5/overrides.min.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/style.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/color.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/base.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/lsv_custom.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/responsive.css?omxbcp"</span>);
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/responsive-custom.css?omxbcp"</span>);
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-        @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/css_custom/lsv.css?omxbcp"</span>);
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span> - La Silla Vacía<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/assets/styles/app.css"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-main-body"</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
@@ -255,112 +171,30 @@
 
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-602c79dda05454ecc999bc21a0e9ee0d-panel-view">
-    <code class="Code Code--lang-html">
-        <pre><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-comment">&lt;!--
-    PHP: Check if fonts-loaded cookie has been set.
-    If so, add the `fonts-loaded` class to the `html` element.
---&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"es"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"ltr"</span> <span class="hljs-attr">prefix</span>=<span class="hljs-string">"og: http://ogp.me/ns#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-js fonts-loaded"</span>&gt;</span>
+    <code class="Code Code--lang-javascript">
+        <pre><span class="hljs-comment">/* eslint-disable react/no-danger, react/jsx-filename-extension */</span>
+<span class="hljs-keyword">import</span> {h, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'preact'</span>;
 
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-built_in">document</span>.documentElement.className = <span class="hljs-built_in">document</span>.documentElement.className.replace(<span class="hljs-string">'no-js'</span>, <span class="hljs-string">'has-js'</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PreviewTemplate</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render(props) {
+    <span class="hljs-keyword">return</span> (
+      &lt;html lang="es" dir="ltr" prefix="og: http://ogp.me/ns#" className="no-js fonts-loaded"&gt;
+      &lt;head&gt;
+        &lt;meta charSet="utf-8" /&gt;
+        &lt;meta name="referrer" content="origin" /&gt;
+        &lt;meta name="robots" content="index, follow" /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+        &lt;link rel="stylesheet" href="/assets/styles/app.css" /&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;div dangerouslySetInnerHTML={{ __html: props.yield }} /&gt;
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downloadJSAtOnload</span>(<span class="hljs-params"></span>) </span>{
-      <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);
-      element.src = <span class="hljs-string">"{{ '/assets/v1.0.0/scripts/app.js' | path }}"</span>;
-      <span class="hljs-built_in">document</span>.body.appendChild(element);
-      <span class="hljs-built_in">document</span>.body.dataset.menuExpanded = <span class="hljs-string">'false'</span>;
-    }
-
-    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"load"</span>, downloadJSAtOnload, <span class="hljs-literal">false</span>);
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"dns-prefetch"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//fonts.googleapis.com"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"dns-prefetch"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//themes.googleusercontent.com"</span> /&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"shortcut icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/assets/v1.0.0/icons/icon.ico' | path }}"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"image/ico"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"apple-touch-icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/assets/v1.0.0/icons/icon.png' | path }}"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"image/png"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"mask-icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/assets/icons/v1.0.0/icon.svg' | path }}"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"{{ site.theme_color }}"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/humans.txt"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"manifest"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/manifest.json"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/assets/v1.0.0/styles/app.css' | path }}"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"referrer"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"origin"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"robots"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"index, follow"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"format-detection"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"telephone=no"</span>&gt;</span> {%- if _target.context.title -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:title"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ _target.context.title }}"</span> /&gt;</span> {%- else -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:title"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ site.title }}"</span> /&gt;</span> {%- endif -%} {%- if _target.context.description -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ _target.context.description }}"</span> /&gt;</span> {%- else -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ site.description }}"</span> /&gt;</span> {%- endif -%} {%- if _target.context.url -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:url"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ _target.context.url }}"</span> /&gt;</span> {%- else -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:url"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ site.url }}"</span> /&gt;</span> {%- endif -%} {%- if _target.context.avatar -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:image"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ _target.context.avatar.src }}"</span> /&gt;</span> {%- else -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"og:image"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"{{ '/assets/icons/icon.png' | path }}"</span> /&gt;</span> {%- endif -%} {%- if _target.context.handle -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"twitter:creator"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"@{{ _target.context.handle }}"</span> /&gt;</span> {%- endif -%}
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"twitter:card"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"summary"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"twitter:site"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"@{{ site.handle }}"</span> /&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/system/system.base.css?omxbcp"</span>);
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/contextual/contextual.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/media/css/media.css?omxbcp"</span>);
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/simplenews/simplenews.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/date/date_api/date.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/field/theme/field.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/logintoboggan/logintoboggan.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/node/node.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/views/css/views.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/ckeditor/css/ckeditor.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/admin_menu/admin_menu.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/admin_menu/admin_menu_toolbar/admin_menu_toolbar.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/modules/shortcut/shortcut.css?omxbcp"</span>);
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/ctools/css/ctools.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/panels/css/panels.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/layouts/despliegue/despliegue.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/webform/css/webform.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/panels/plugins/layouts/onecol/onecol.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/modules/ckeditor/css/ckeditor.editor.css?omxbcp"</span>);
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.css"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"all"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/bootstrap/css/3.3.5/overrides.min.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/style.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/color.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/base.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/lsv_custom.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/responsive.css?omxbcp"</span>);
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/responsive-custom.css?omxbcp"</span>);
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"http://lasillavacia.com/sites/all/themes/lasillavacia/css/css_custom/lsv.css?omxbcp"</span>);
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>{{ _target.context.title }} - La Silla Vacía<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"article-main-body"</span>&gt;</span>
-    {{ yield }}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
+      &lt;script src="/assets/scripts/app.js" /&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    );
+  }
+}</pre>
     </code>
 </div>
 
@@ -412,7 +246,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/_partials/_preview.html</span>
+            <span class="Meta-value">src/components/_partials/_preview.jsx</span>
         </li>
         
         

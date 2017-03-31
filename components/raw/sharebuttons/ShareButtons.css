@@ -1,0 +1,43 @@
+.c-shareButtons {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    & li {
+      float: left;
+    }
+    & button,
+    & a {
+      background: 0;
+      padding: 0;
+      border: 0;
+      width: 30px;
+      height: 30px;
+      text-indent: -9999px;
+      font-size: 0;
+      display: block;
+    }
+
+    & .whatsapp {
+      @media (--from-small-screen) {
+        display: none;
+      }
+    }
+  }
+
+  & .twitter button {
+    background-image: url(/assets/icons/twitter.svg);
+  }
+
+  & .facebook button {
+    background-image: url(/assets/icons/facebook.svg);
+  }
+
+  & .whatsapp a {
+    background-image: url(/assets/icons/whatsapp.svg);
+  }
+
+  & .email a {
+    background-image: url(/assets/icons/email.svg);
+  }
+}

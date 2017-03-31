@@ -2,9 +2,3 @@
   Front-end development
   URL: https://wietseneven.com
   Twitter: @wietseneven
-
-/* SITE */
-  Language: English
-  Doctype: HTML5
-  CMS: Perch Runway (https://grabaperch.com/products/runway)
-  Software: PHP, TextMate, Sketch
