@@ -153,13 +153,8 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-9e38028431ae7ebc2747ebf07e2971a1-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>The toggle title<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>The toggle title<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>The toggle title<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -172,24 +167,13 @@
 <span class="hljs-keyword">import</span> { h, Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'preact'</span>;
 
 <span class="hljs-keyword">const</span> Toggle = <span class="hljs-function">(<span class="hljs-params">{ children, ...props }</span>) =&gt;</span> (
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>
-        {props.title}
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>
+      {props.title}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>
-        {children}
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__button"</span>&gt;</span>
-        {props.title}
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>
-        {children}
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"c-toggle__content"</span>&gt;</span>
+      {children}
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 );
@@ -245,7 +229,10 @@
   box-sizing: border-box;
   max-width: 600px;
   display: block;
-  border: 3px solid map(colors, secondary, base);
+  border: 2px solid map(colors, secondary, base);
+  margin-top: 1em;
+  margin-bottom: 1em;
+
   &amp;__button {
     background-color: #fff;
     color: map(colors, primary, dark);
@@ -315,7 +302,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.1 KB</span>
+                    <span class="Meta-value">1.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -329,6 +316,8 @@
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-keyword">import</span> Velocity <span class="hljs-keyword">from</span> <span class="hljs-string">'velocity-animate'</span>;
+
+<span class="hljs-keyword">const</span> openClass = <span class="hljs-string">'c-toggle--open'</span>;
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">cToggle</span> </span>{
   <span class="hljs-keyword">constructor</span>(element) {
@@ -347,10 +336,10 @@
 
   toggle() {
     <span class="hljs-keyword">let</span> direction = <span class="hljs-string">"slideDown"</span>;
-    <span class="hljs-keyword">this</span>.element.classList.add(<span class="hljs-string">'c-toggle--open'</span>);
+    <span class="hljs-keyword">this</span>.element.classList.add(openClass);
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.open) {
       direction = <span class="hljs-string">"slideUp"</span>;
-      <span class="hljs-keyword">this</span>.element.classList.remove(<span class="hljs-string">'c-toggle--open'</span>);
+      <span class="hljs-keyword">this</span>.element.classList.remove(openClass);
     }
     <span class="hljs-keyword">this</span>.open = !<span class="hljs-keyword">this</span>.open;
     Velocity(<span class="hljs-keyword">this</span>.content, direction, {
@@ -384,7 +373,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">903 Bytes</span>
+                    <span class="Meta-value">926 Bytes</span>
                 </li>
             </ul>
         </div>

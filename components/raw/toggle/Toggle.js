@@ -1,5 +1,7 @@
 import Velocity from 'velocity-animate';
 
+const openClass = 'c-toggle--open';
+
 class cToggle {
   constructor(element) {
     this.element = element;
@@ -17,10 +19,10 @@ class cToggle {
 
   toggle() {
     let direction = "slideDown";
-    this.element.classList.add('c-toggle--open');
+    this.element.classList.add(openClass);
     if (this.open) {
       direction = "slideUp";
-      this.element.classList.remove('c-toggle--open');
+      this.element.classList.remove(openClass);
     }
     this.open = !this.open;
     Velocity(this.content, direction, {
