@@ -1,6 +1,6 @@
 {
   "name": "lsv-components",
-  "version": "1.0.6a",
+  "version": "1.0.6b",
   "description": "The La Silla Vacia webcomponents",
   "scripts": {
     "prestart": "npm install",

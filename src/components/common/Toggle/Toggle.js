@@ -29,9 +29,12 @@ class cToggle {
   }
 }
 
-(function(d) {
-  const toggles = d.querySelectorAll('.c-toggle');
-  for (let toggle of toggles) {
-    new cToggle(toggle);
-  }
-})(document);
+document.addEventListener("DOMContentLoaded", function (event) {
+  (function (d) {
+    const toggles = d.querySelectorAll('.c-toggle');
+    for (let toggle of toggles) {
+      new cToggle(toggle);
+    }
+  })(document);
+});
+

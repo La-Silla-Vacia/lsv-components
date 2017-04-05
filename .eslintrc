@@ -3,6 +3,7 @@
   "rules": {
     "no-param-reassign": "off",
     "func-names": "off",
-    "import/newline-after-import": "off"
+    "import/newline-after-import": "off",
+    "react-in-jsx-scope": "off"
   }
 }
