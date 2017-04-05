@@ -9,7 +9,7 @@
   margin-bottom: 1em;
 
   &__button {
-    background-color: #fff;
+    background-color: transparent;
     color: map(colors, primary, dark);
     padding: .5em 1em;
     cursor: pointer;
@@ -49,6 +49,7 @@
     overflow: hidden;
     padding: .5em 1em;
     display: none;
+    line-height: 1.5;
 
     & > p {
       &:first-child {
