@@ -335,26 +335,24 @@
   }
 
   toggle() {
-    <span class="hljs-keyword">let</span> direction = <span class="hljs-string">"slideDown"</span>;
+    <span class="hljs-keyword">let</span> direction = <span class="hljs-string">'slideDown'</span>;
     <span class="hljs-keyword">this</span>.element.classList.add(openClass);
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.open) {
-      direction = <span class="hljs-string">"slideUp"</span>;
+      direction = <span class="hljs-string">'slideUp'</span>;
       <span class="hljs-keyword">this</span>.element.classList.remove(openClass);
     }
     <span class="hljs-keyword">this</span>.open = !<span class="hljs-keyword">this</span>.open;
     Velocity(<span class="hljs-keyword">this</span>.content, direction, {
-      <span class="hljs-attr">duration</span>: <span class="hljs-number">500</span>
+      <span class="hljs-attr">duration</span>: <span class="hljs-number">500</span>,
     });
   }
 }
 
-<span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"DOMContentLoaded"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
-  (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
-    <span class="hljs-keyword">const</span> toggles = d.querySelectorAll(<span class="hljs-string">'.c-toggle'</span>);
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> toggle <span class="hljs-keyword">of</span> toggles) {
-      <span class="hljs-keyword">new</span> cToggle(toggle);
-    }
-  })(<span class="hljs-built_in">document</span>);
+<span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'DOMContentLoaded'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> toggles = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.c-toggle'</span>);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> toggle <span class="hljs-keyword">of</span> toggles) {
+    <span class="hljs-keyword">new</span> cToggle(toggle);
+  }
 });
 
 </pre>
@@ -373,7 +371,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">926 Bytes</span>
+                    <span class="Meta-value">887 Bytes</span>
                 </li>
             </ul>
         </div>

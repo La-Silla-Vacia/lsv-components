@@ -18,25 +18,23 @@ class cToggle {
   }
 
   toggle() {
-    let direction = "slideDown";
+    let direction = 'slideDown';
     this.element.classList.add(openClass);
     if (this.open) {
-      direction = "slideUp";
+      direction = 'slideUp';
       this.element.classList.remove(openClass);
     }
     this.open = !this.open;
     Velocity(this.content, direction, {
-      duration: 500
+      duration: 500,
     });
   }
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  (function (d) {
-    const toggles = d.querySelectorAll('.c-toggle');
-    for (let toggle of toggles) {
-      new cToggle(toggle);
-    }
-  })(document);
+document.addEventListener('DOMContentLoaded', function () {
+  const toggles = document.querySelectorAll('.c-toggle');
+  for (let toggle of toggles) {
+    new cToggle(toggle);
+  }
 });
 
