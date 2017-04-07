@@ -28,7 +28,7 @@ const ShareButtons = () => (
         </a>
       </li>
     </ul>
-    <script src="http://connect.facebook.net/es_ES/all.js" type="text/javascript" charSet="utf-8" />
+    <script src="//connect.facebook.net/es_ES/all.js" type="text/javascript" charSet="utf-8" />
   </div>
 );
 

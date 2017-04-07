@@ -26,18 +26,18 @@
   }
 
   & .twitter button {
-    background-image: url(/assets/icons/twitter.svg);
+    background-image: url('../icons/twitter.svg');
   }
 
   & .facebook button {
-    background-image: url(/assets/icons/facebook.svg);
+    background-image: url('../icons/facebook.svg');
   }
 
   & .whatsapp a {
-    background-image: url(/assets/icons/whatsapp.svg);
+    background-image: url('../icons/whatsapp.svg');
   }
 
   & .email a {
-    background-image: url(/assets/icons/email.svg);
+    background-image: url('../icons/email.svg');
   }
 }

@@ -4,9 +4,12 @@
   box-sizing: border-box;
   max-width: 600px;
   display: block;
-  border: 3px solid map(colors, secondary, base);
+  border: 2px solid map(colors, secondary, base);
+  margin-top: 1em;
+  margin-bottom: 1em;
+
   &__button {
-    background-color: #fff;
+    background-color: transparent;
     color: map(colors, primary, dark);
     padding: .5em 1em;
     cursor: pointer;
@@ -46,6 +49,7 @@
     overflow: hidden;
     padding: .5em 1em;
     display: none;
+    line-height: 1.5;
 
     & > p {
       &:first-child {
