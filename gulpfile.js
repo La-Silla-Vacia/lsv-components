@@ -206,7 +206,7 @@ function components() {
     .pipe(babel({
       presets: ['es2015', 'react', 'stage-2'],
       plugins: [
-        ["transform-react-jsx", { "pragma": "h" }]
+        ['transform-react-jsx', { 'pragma': 'h' }]
       ]
     }))
     .pipe(gulp.dest('dist'));

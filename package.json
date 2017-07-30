@@ -1,6 +1,6 @@
 {
   "name": "lsv-components",
-  "version": "1.0.6b",
+  "version": "1.0.7",
   "description": "The La Silla Vacia webcomponents",
   "scripts": {
     "prestart": "npm install",
@@ -23,7 +23,7 @@
     "@frctl/mandelbrot": "latest",
     "@frctl/nunjucks": "latest",
     "autoprefixer": "latest",
-    "babel-preset-env": "^1.2.2",
+    "babel-preset-env": "^1.5.1",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "^6.23.0",
     "cssnano": "latest",
@@ -60,6 +60,8 @@
     "prismjs": "latest"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-stage-2": "^6.22.0",
     "eslint": "^3.12.2",
@@ -71,6 +73,7 @@
     "preact-render-to-string": "^3.6.0",
     "stylelint": "^7.6.0",
     "velocity-animate": "^1.5.0",
+    "webpack": "^2.6.1",
     "webpack-stream": "^3.2.0"
   }
 }
