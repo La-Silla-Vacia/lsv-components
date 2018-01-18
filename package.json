@@ -1,6 +1,6 @@
 {
   "name": "lsv-components",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "The La Silla Vacia webcomponents",
   "scripts": {
     "prestart": "npm install",
@@ -30,6 +30,7 @@
     "debug": "^2.6.3",
     "del": "latest",
     "fontfaceobserver": "latest",
+    "fs": "^0.0.1-security",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-babel": "latest",
     "gulp-concat": "latest",
@@ -61,7 +62,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-stage-2": "^6.22.0",
     "eslint": "^3.12.2",
